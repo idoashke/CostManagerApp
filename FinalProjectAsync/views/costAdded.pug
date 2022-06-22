@@ -1,0 +1,19 @@
+head
+    meta(charset='utf-8')
+    title=id
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+    body
+        br
+        br
+        br
+        .modal-dialog
+            .modal-content
+                // Modal Header
+                .modal-header
+                    h4#myModalLabel.modal-title
+                        | Cost '#{title}' has been added successfully!
+                .modal-body
+                    a.btn.btn-primary(href='/') Go Home
+                .modal-footer
+                    h6 &copy; Ido Ashkenazi & Daniel Bugdari

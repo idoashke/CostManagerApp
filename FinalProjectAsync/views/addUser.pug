@@ -1,0 +1,42 @@
+head
+    meta(charset='utf-8')
+    title Add User
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+    body
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4#myModalLabel.modal-title
+                        | Create a New User 👱‍♂️
+                .modal-body
+                    form(role='form' method='POST' action='http://localhost:3000/api/users/addUser/success')
+                        div.form-group
+                            label(for='id') ID:
+                            input#id.form-control(type='number', placeholder='555555555' name='id' required=true)
+                        div.form-group
+                            label(for='fName') First Name:
+                            input#fName.form-control(type='text', placeholder='Israel' name='fName' required=true)
+                        div.form-group
+                            label(for='lName') Last Name:
+                            input#lName.form-control(type='text', placeholder='Israeli' name='lName' required=true)
+                        div.form-group
+                            label Gender: &nbsp;&nbsp;&nbsp;
+                            input#male(type='radio' name='gender' value='male' required=true)
+                            label(for='male') &nbsp;Male &nbsp;&nbsp;
+                            input#female(type='radio' name='gender' value='female' required=true)
+                            label(for='female') &nbsp;Female
+                        div.form-group
+                            label(for='mStatus') Martial Status: &nbsp;
+                            select#mStatus(name='mStatus')
+                                option(value='single') Single
+                                option(value='married') Married
+                                option(value='widowed') Widowed
+                                option(value='divorced') Divorced
+                                option(value='seperated') Seperated
+                        div.form-group
+                            label(for='bDate') Birth Date:
+                            input#bDate.form-control(type='date', name='bDate' required=true)
+                        button.btn.btn-primary(type="submit", name="submit") Add
+                .modal-footer
+                    h6 &copy; Ido Ashkenazi & Daniel Bugdari

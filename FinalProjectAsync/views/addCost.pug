@@ -1,0 +1,34 @@
+head
+    meta(charset='utf-8')
+    title=id
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+    body
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h4#myModalLabel.modal-title
+                        | Add Cost ✍🏻
+                .modal-body
+                    form(role='form' method='POST' action='http://localhost:3000/api/users/addCost/success')
+                        div.form-group
+                            label(for='userId') User ID:
+                            input#userId.form-control(type='number', name='userId' value=id readonly='readonly')
+                        div.form-group
+                            label(for='date') Date:
+                            input#date.form-control(type='date', name='date' value='2022-06-18' required=true)
+                        div.form-group
+                            label(for='title') Title:
+                            input#title.form-control(type='text', placeholder='Title' name='title' required=true)
+                        div.form-group
+                            label(for='sum') Sum:
+                            input#sum.form-control(type='number', placeholder='0' name='sum' required=true)
+                        div.form-group
+                            label(for='category') Category:
+                            input#category.form-control(type='text', placeholder='Fashion/Sport/Food/etc..' name='category' required=true)
+                        div.form-group
+                            label(for='description') Description:
+                            input#description.form-control(type='text', name='description' required=true)
+                        button.btn.btn-primary(type="submit", name="submit") Add
+                .modal-footer
+                    h6 &copy; Ido Ashkenazi & Daniel Bugdari

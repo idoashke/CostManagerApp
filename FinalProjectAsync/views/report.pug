@@ -1,0 +1,38 @@
+
+head
+    meta(charset='utf-8')
+    title=userId
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+main(role="main")
+    .jumbotron
+        .container
+            h1.display-3 Welcome to reports page 💼
+            p
+            h4 Please choose the date of the report you want to show:
+            br
+            .row
+                .col-md-5
+                    h2 Year
+                    p Get your report by year
+                    form(role='form' method='post' action='http://localhost:3000/api/users/report/costsTable')
+                        .input-group
+                            label(for='year')
+                            input#year.form-control(type='number', placeholder='YYYY' min=2020 name ='year', required=true)
+                            input(type='hidden' name='userId' value=userId)
+                        br
+                        p
+                        button.btn.btn-primary(type="submit", name="submit") Show By  Year
+                .col-md-5
+                    h2 Month
+                    p Get your report by month
+                    form(role='form' method='post' action='http://localhost:3000/api/users/report/costsTable')
+                        .input-group
+                            label(for='month')
+                            input#month.form-control(type='month', name ='month', required=true)
+                            input(type='hidden' name='userId' value=userId)
+                        br
+                        button.btn.btn-primary(type="submit", name="submit") Show By Month
+br
+footer.container
+    h6 &copy; Ido Ashkenazi & Daniel Bugdari
