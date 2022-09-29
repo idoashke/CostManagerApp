@@ -13,7 +13,7 @@ const apiRouter = require('./routes/api');
 var app = express();
 
 // connect to mongodb
-const url = `mongodb://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data?directConnection=true`;
+const url = `mongodb+srv://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data`;
 mongoose.connect(url)
     .then( () => {
       console.log('Connected to the database ');
