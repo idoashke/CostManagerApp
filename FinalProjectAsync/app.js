@@ -13,8 +13,9 @@ const apiRouter = require('./routes/api');
 var app = express();
 
 // connect to mongodb
-//const url = `mongodb+srv://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data`;
-const url = `mongodb+srv://YonatanAvizov:Sa0725rh@moneymanger.w0mn0.mongodb.net/FrontedDB`;
+// const url = `mongodb+srv://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data`;
+const url = "mongodb+srv://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data";
+
 
 mongoose.connect(url)
     .then( () => {
