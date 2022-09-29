@@ -14,7 +14,7 @@ var app = express();
 
 // connect to mongodb
 //const url = `mongodb+srv://idoash1212:Aa123456@finalprojectdb.t0kmq5y.mongodb.net/data`;
-const url = `mongodb+srv://admin:Aa123456@cluster0.vedmyd3.mongodb.net/test`;
+const url = `mongodb+srv://YonatanAvizov:Sa0725rh@moneymanger.w0mn0.mongodb.net/FrontedDB`;
 
 mongoose.connect(url)
     .then( () => {
